@@ -10,6 +10,7 @@ import java.util.Arrays;
 public class BirdWatcher {
 
     public static void main(String[] args) {
+        new BirdWatcher(getLastWeek());
         System.out.println("Birds Last Week" + Arrays.toString(getLastWeek()));
         System.out.println("Birds Today: " + getToday());
         incrementTodaysCount();
@@ -49,7 +50,7 @@ public class BirdWatcher {
      * Implement the BirdWatcher.incrementTodaysCount() method to increment today's count:
      */
     public static void incrementTodaysCount() {
-        birdsPerDay[birdsPerDay.length] = getToday() + 1;
+        birdsPerDay[birdsPerDay.length - 1] = getToday() + 1;
     }
 
     /**

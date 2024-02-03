@@ -1,8 +1,9 @@
-package com.example.codingtest;
+package com.example.codingtest.livecoding;
 
+import com.example.codingtest.livecoding.PalindromeVerifier;
 import org.junit.jupiter.api.Test;
 
-import static com.example.codingtest.PalindromeVerifier.isPalindrome;
+import static com.example.codingtest.livecoding.PalindromeVerifier.isPalindrome;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PalindromeVerifierTest {

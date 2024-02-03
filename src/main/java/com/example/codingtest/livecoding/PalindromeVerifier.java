@@ -1,4 +1,4 @@
-package com.example.codingtest;
+package com.example.codingtest.livecoding;
 
 /*
  *  Verify if an alphanumeric input is palindrome or not

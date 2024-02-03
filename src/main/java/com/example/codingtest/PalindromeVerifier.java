@@ -6,18 +6,21 @@ package com.example.codingtest;
 public class PalindromeVerifier {
     public static void main(String[] args) {
         String input = "122aussua221";
-        if(isPalindrome(input)) {
-            System.out.println(input + " is palindrome");
-        } else {
-            System.out.println(input + " is not a palindrome");
-        }
+        var result = isPalindrome(input);
+        System.out.println(result);
     }
 
-    public static boolean isPalindrome(String str) {
+    public static String isPalindrome(String str) {
+        if (str == null) {
+            return "input cannot be null";
+        }
         var simplified = simplifyString(str);
         var reversedSimplified = new StringBuilder(simplified).reverse().toString();
 
-        return reversedSimplified.equals(simplified);
+        if (reversedSimplified.equals(simplified)) {
+            return str + " is palindrome";
+        }
+        return str + " is not a palindrome";
     }
 
     public static String simplifyString(String str) {

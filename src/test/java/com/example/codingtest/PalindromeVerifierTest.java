@@ -2,7 +2,7 @@ package com.example.codingtest;
 
 import org.junit.jupiter.api.Test;
 
-import static com.example.codingtest.Main.isPalindrome;
+import static com.example.codingtest.PalindromeVerifier.isPalindrome;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PalindromeVerifierTest {
@@ -26,7 +26,7 @@ class PalindromeVerifierTest {
     @Test
     void simplifyString() {
         var str = "1 level 1";
-        var result = Main.simplifyString(str);
+        var result = PalindromeVerifier.simplifyString(str);
 
         assertEquals("1level1", result);
     }

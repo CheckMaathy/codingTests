@@ -1,6 +1,6 @@
 package com.example.codingtest;
 
-public class Main {
+public class PalindromeVerifier {
     public static void main(String[] args) {
         String input = "122aussua221";
         if(isPalindrome(input)) {

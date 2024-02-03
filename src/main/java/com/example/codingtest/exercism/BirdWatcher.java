@@ -1,8 +1,6 @@
 package com.example.codingtest.exercism;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 
 
 /**
@@ -17,7 +15,7 @@ public class BirdWatcher {
         incrementTodaysCount();
         System.out.println("Incremented Today: " + getToday());
         System.out.println("Has days without birds: " + hasDayWithoutBirds());
-        System.out.println("Number of birds in the first days of week: " + getCountForFirstDays());
+        System.out.println("Number of birds in the first days of week: " + getCountForFirstDays(4));
         System.out.println("Number of 'busy days': " + getBusyDays());
     }
 

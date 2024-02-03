@@ -1,6 +1,7 @@
 package com.example.codingtest.exercism;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 
 /**
@@ -11,13 +12,14 @@ public class BirdWatcher {
 
     public static void main(String[] args) {
         new BirdWatcher(getLastWeek());
-        System.out.println("Birds Last Week" + Arrays.toString(getLastWeek()));
-        System.out.println("Birds Today: " + getToday());
+        System.out.println("Birds Last Week: " + Arrays.toString(getLastWeek()));
+        System.out.println("Birds Last day of week: " + getToday());
         incrementTodaysCount();
         System.out.println("Incremented Today: " + getToday());
+        System.out.println("New Birds in Last Week: " + Arrays.toString(birdsPerDay.clone()));
         System.out.println("Has days without birds: " + hasDayWithoutBirds());
         System.out.println("Number of birds in the first days of week: " + getCountForFirstDays(4));
-        System.out.println("Number of 'busy days': " + getBusyDays());
+        System.out.println("Number of busy days: " + getBusyDays());
     }
 
     private static int[] birdsPerDay;
@@ -59,8 +61,14 @@ public class BirdWatcher {
      * @return
      */
     public static boolean hasDayWithoutBirds() {
-        // TODO: Implement method
-        return true;
+        boolean hasDayWithoutBirds = false;
+        for (int birds : birdsPerDay) {
+            if (birds == 0) {
+                hasDayWithoutBirds = true;
+                break;
+            }
+        }
+        return hasDayWithoutBirds;
     }
 
     /**
@@ -71,8 +79,14 @@ public class BirdWatcher {
      * @return
      */
     public static int getCountForFirstDays(int numberOfDays) {
-        // TODO: Implement method
-        return numberOfDays;
+        if (numberOfDays > 7) {
+            throw new Error("Max days permitted is 7");
+        }
+        int totalBirds = 0;
+        for (int i = 0; i < numberOfDays; i++) {
+            totalBirds = totalBirds + birdsPerDay[i];
+        }
+        return totalBirds;
     }
 
     /**
@@ -81,7 +95,12 @@ public class BirdWatcher {
      * @return
      */
     public static int getBusyDays() {
-        // TODO: Implement method
-        return 1;
+        int daysWithMoreThanFiveBirds = 0;
+        for (int birds : birdsPerDay) {
+            if (birds >= 5) {
+                daysWithMoreThanFiveBirds++;
+            }
+        }
+        return daysWithMoreThanFiveBirds;
     }
 }

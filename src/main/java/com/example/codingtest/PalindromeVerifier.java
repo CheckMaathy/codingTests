@@ -1,5 +1,8 @@
 package com.example.codingtest;
 
+/*
+ *  Verify if an alphanumeric input is palindrome or not
+ */
 public class PalindromeVerifier {
     public static void main(String[] args) {
         String input = "122aussua221";

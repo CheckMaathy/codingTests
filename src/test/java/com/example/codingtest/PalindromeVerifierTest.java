@@ -19,8 +19,10 @@ class PalindromeVerifierTest {
     void isPalindrome_Palindrome() {
         var str = "1 level 1";
         var result = isPalindrome(str);
+        var result2 = isPalindrome(" ");
 
         assertTrue(result);
+        assertTrue(result2);
     }
 
     @Test

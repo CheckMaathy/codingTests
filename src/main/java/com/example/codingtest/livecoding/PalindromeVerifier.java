@@ -1,7 +1,8 @@
 package com.example.codingtest.livecoding;
 
-/*
- *  Verify if an alphanumeric input is palindrome or not
+
+/**
+ * Verify if an alphanumeric input is palindrome or not
  */
 public class PalindromeVerifier {
     public static void main(String[] args) {

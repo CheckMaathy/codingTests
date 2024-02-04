@@ -2,6 +2,7 @@ package com.example.codingtest.exercism;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.stream.IntStream;
 
 
 /**
@@ -80,7 +81,7 @@ public class BirdWatcher {
      */
     public static int getCountForFirstDays(int numberOfDays) {
         if (numberOfDays > 7) {
-            throw new Error("Max days permitted is 7");
+            return IntStream.of(birdsPerDay).sum();
         }
         int totalBirds = 0;
         for (int i = 0; i < numberOfDays; i++) {

@@ -37,10 +37,13 @@ class BirdWatcherTest {
         assertEquals(BirdWatcher.getCountForFirstDays(3), 11);
     }
 
+    /**
+     * The getCountForFirstDays method returns overall count when number of days is higher than array size
+     */
     @Test
-    void getCountForFirstDays_Error() {
-        new BirdWatcher(new int[]{0, 6, 5, 2, 2, 8, 3});
-        assertThrows(Error.class, () -> BirdWatcher.getCountForFirstDays(8));
+    void getCountForFirstDays_MoreThanSevenDays() {
+        new BirdWatcher(new int[]{0, 3, 2, 3, 2, 4, 2});
+        assertEquals(16, BirdWatcher.getCountForFirstDays(10));
     }
 
     @Test

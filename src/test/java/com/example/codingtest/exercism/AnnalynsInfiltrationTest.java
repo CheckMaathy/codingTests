@@ -107,4 +107,36 @@ class AnnalynsInfiltrationTest {
                 .canFreePrisoner(false, false,
                         false, true));
     }
+
+    @Test
+    @DisplayName("The canFreePrisoner method returns false when only prisoner is sleeping and pet dog is present")
+    void canFreePrisoner_PrisionerSleeping_DogPresent() {
+        assertFalse(AnnalynsInfiltration
+                .canFreePrisoner(true, true,
+                        false, true));
+    }
+
+    @Test
+    @DisplayName("The canFreePrisoner method returns false when only knight is sleeping and pet dog is present")
+    void canFreePrisoner_KnightSleeping_DogPresent() {
+        assertFalse(AnnalynsInfiltration
+                .canFreePrisoner(false, true,
+                        true, true));
+    }
+
+    @Test
+    @DisplayName("The canFreePrisoner method returns false when only archer is awake and pet dog is present")
+    void canFreePrisoner_ArcherAwake_DogPresent() {
+        assertFalse(AnnalynsInfiltration
+                .canFreePrisoner(false, true,
+                        false, true));
+    }
+
+    @Test
+    @DisplayName("The canFreePrisoner method returns false when everyone is awake and pet dog is present")
+    void canFreePrisoner_EveryoneAwake_DogPresent() {
+        assertFalse(AnnalynsInfiltration
+                .canFreePrisoner(true, true,
+                        true, true));
+    }
 }

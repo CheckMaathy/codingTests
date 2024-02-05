@@ -68,10 +68,7 @@ public class AnnalynsInfiltration {
      * @return
      */
     public static boolean canSignalPrisoner(boolean archerIsAwake, boolean prisonerIsAwake) {
-        if (archerIsAwake || !prisonerIsAwake) {
-            return false;
-        }
-        return true;
+        return !archerIsAwake && prisonerIsAwake;
     }
 
     /**
@@ -87,6 +84,6 @@ public class AnnalynsInfiltration {
      * @return
      */
     public static boolean canFreePrisoner(boolean knightIsAwake, boolean archerIsAwake, boolean prisonerIsAwake, boolean petDogIsPresent) {
-        return true;
+        return (!knightIsAwake && !archerIsAwake && prisonerIsAwake) || (!archerIsAwake && petDogIsPresent);
     }
 }

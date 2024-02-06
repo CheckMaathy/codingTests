@@ -57,7 +57,7 @@ public class CalculatorConundrum {
             case "":
                 throw new IllegalArgumentException("Operation cannot be empty");
             default:
-                throw new IllegalOperationException("Operation" + operation + " does not exist");
+                throw new IllegalOperationException("Operation '" + operation + "' does not exist");
         }
         return response;
     }

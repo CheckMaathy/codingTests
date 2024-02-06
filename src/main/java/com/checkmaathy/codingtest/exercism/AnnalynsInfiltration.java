@@ -1,4 +1,4 @@
-package com.example.codingtest.exercism;
+package com.checkmaathy.codingtest.exercism;
 
 /**
  * In this exercise, you'll be implementing the quest logic for a new RPG game a friend is developing.

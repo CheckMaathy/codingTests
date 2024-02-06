@@ -1,4 +1,4 @@
-package com.example.codingtest.exercism;
+package com.checkmaathy.codingtest.exercism;
 
 import org.junit.jupiter.api.Test;
 

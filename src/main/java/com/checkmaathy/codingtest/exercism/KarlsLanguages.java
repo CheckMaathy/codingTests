@@ -1,4 +1,4 @@
-package com.example.codingtest.exercism;
+package com.checkmaathy.codingtest.exercism;
 
 import java.util.*;
 import java.util.stream.Collectors;

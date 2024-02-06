@@ -1,4 +1,4 @@
-package com.example.codingtest.exercism;
+package com.checkmaathy.codingtest.exercism;
 
 
 /**
@@ -10,7 +10,7 @@ package com.example.codingtest.exercism;
  */
 public class CalculatorConundrum {
 
-    private static String EQUALS_SIGNAL = " = ";
+    private static final String EQUALS_SIGNAL = " = ";
 
     public static void main(String[] args) {
 

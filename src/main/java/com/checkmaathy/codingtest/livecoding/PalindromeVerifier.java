@@ -1,4 +1,4 @@
-package com.example.codingtest.livecoding;
+package com.checkmaathy.codingtest.livecoding;
 
 
 /**

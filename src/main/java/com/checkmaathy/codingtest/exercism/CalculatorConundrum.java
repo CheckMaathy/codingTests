@@ -49,7 +49,7 @@ public class CalculatorConundrum {
                 break;
             case "/":
                 if (operand2 == 0) {
-                    throw new IllegalOperationException("Division by zero is not allowed");
+                    throw new IllegalOperationException("Division by zero is not allowed", new ArithmeticException());
                 }
                 result = operand1 / operand2;
                 response = operand1 + " / " + operand2 + EQUALS_SIGNAL + result;

@@ -1,5 +1,8 @@
 package com.checkmaathy.codingtest.exercism;
 
+import java.util.List;
+import java.util.regex.Pattern;
+
 /**
  * In this exercise you will implement a partial set of utility routines to help a developer clean up SqueakyClean names.
  *
@@ -11,6 +14,17 @@ package com.checkmaathy.codingtest.exercism;
  */
 public class SqueakyClean {
 
+    static final List<KeyValue> replaceToValue = List.of(
+            new KeyValue(" ", "_"),
+            new KeyValue("0", "o"),
+            new KeyValue("1", "l"),
+            new KeyValue("3", "e"),
+            new KeyValue("4", "a"),
+            new KeyValue("7", "t"),
+            new KeyValue("¡", ""),
+            new KeyValue("!", "")
+    );
+
     public static void main(String[] args) {
     }
 
@@ -21,8 +35,31 @@ public class SqueakyClean {
      * @return
      */
     static String clean(String identifier) {
-        var squeakyCleanString = identifier.replaceAll(" ", "_");
+        String squeakyCleanString = identifier;
+
+        if (squeakyCleanString.contains("-")) {
+            squeakyCleanString = Pattern
+                    .compile("-(.)")
+                    .matcher(squeakyCleanString)
+                    .replaceAll(mr -> mr.group(1).toUpperCase());
+        }
+
+        for (KeyValue keyVal : replaceToValue) {
+            squeakyCleanString = squeakyCleanString.replaceAll(keyVal.key, keyVal.value);
+        }
+
+        squeakyCleanString = squeakyCleanString.replaceAll("[^a-zA-Z_]*", "");
 
         return squeakyCleanString;
+    }
+
+    static class KeyValue {
+        public KeyValue(String key, String value) {
+            this.key = key;
+            this.value = value;
+        }
+
+        private final String key;
+        private final String value;
     }
 }

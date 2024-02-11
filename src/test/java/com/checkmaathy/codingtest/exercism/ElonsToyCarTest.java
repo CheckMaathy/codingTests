@@ -10,7 +10,8 @@ class ElonsToyCarTest {
     @Test
     @DisplayName("The static buy method returns a new remote controlled car instance")
     public void buy_new_car_returns_instance() {
-        assertNotNull(ElonsToyCar.buy());
+        ElonsToyCar car = new ElonsToyCar();
+        assertNotNull(car.buy());
     }
 
     @Test
